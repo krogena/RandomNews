@@ -1,6 +1,5 @@
 package ru.iyshcherbakov.randomnews.di
 
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -10,7 +9,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import ru.iyshcherbakov.randomnews.data.api.NewsService
-import ru.iyshcherbakov.randomnews.models.NewsResponse
 import ru.iyshcherbakov.randomnews.utils.Constants.Companion.BASE_URL
 import javax.inject.Singleton
 
