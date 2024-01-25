@@ -8,6 +8,10 @@ android {
     namespace = "ru.iyshcherbakov.randomnews"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "ru.iyshcherbakov.randomnews"
         minSdk = 24
