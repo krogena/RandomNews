@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="menu">#DCDCDC</color>
+    <color name="splash">#8FA4CD</color>
 </resources>

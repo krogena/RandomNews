@@ -6,22 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 import ru.iyshcherbakov.randomnews.R
 import ru.iyshcherbakov.randomnews.databinding.FragmentDetailsBinding
 import ru.iyshcherbakov.randomnews.databinding.FragmentMainBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [MainFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
+    private val viewModel by viewModels<MainViewModel>()
 
     lateinit var binding: FragmentMainBinding
     override fun onCreateView(
@@ -32,6 +26,11 @@ class MainFragment : Fragment() {
         (activity as AppCompatActivity)
         binding = FragmentMainBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.all
     }
 
 }

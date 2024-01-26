@@ -7,7 +7,8 @@ plugins {
 buildscript {
 
     dependencies {
-        classpath ("com.google.dagger:hilt-android-gradle-plugin:2.40.5")
-        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:2.5.0-beta01")
+        classpath ("com.google.dagger:hilt-android-gradle-plugin:2.50")
+        val nav_version = "2.7.6"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
     }
 }

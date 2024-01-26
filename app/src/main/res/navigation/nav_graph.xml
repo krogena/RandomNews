@@ -15,7 +15,7 @@
             app:destination="@id/detailsFragment"
             app:enterAnim="@android:anim/slide_out_right"
             app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
@@ -33,7 +33,7 @@
             app:destination="@id/detailsFragment"
             app:enterAnim="@android:anim/slide_out_right"
             app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
@@ -46,7 +46,7 @@
             app:destination="@id/detailsFragment"
             app:enterAnim="@android:anim/slide_out_right"
             app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
     </fragment>
 </navigation>
