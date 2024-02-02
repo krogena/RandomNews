@@ -8,14 +8,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import ru.iyshcherbakov.randomnews.R
 import ru.iyshcherbakov.randomnews.databinding.FragmentSearchBinding
 import ru.iyshcherbakov.randomnews.ui.adapters.NewsAdapter
 import ru.iyshcherbakov.randomnews.utils.Resource
@@ -53,6 +56,13 @@ class SearchFragment : Fragment() {
             }
         }
 initAdapter()
+        newsAdapter.setOnItemClickListener {
+            val bundle = bundleOf("article" to it)
+            view.findNavController().navigate(
+                R.id.action_searchFragment_to_detailsFragment,
+                bundle
+            )
+        }
         viewModel.searchNewsLiveData.observe(viewLifecycleOwner){response ->
             when(response){
                 is Resource.Success -> {
