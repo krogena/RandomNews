@@ -43,6 +43,9 @@ android {
 
 dependencies {
 
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
     // Hilt
     val hilt_version = "2.50"
     implementation ("com.google.dagger:hilt-android:$hilt_version")

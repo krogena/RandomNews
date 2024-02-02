@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Random News</string>
+    <string name="mf_1">Popular news</string>
 </resources>
